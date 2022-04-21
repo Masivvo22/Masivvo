@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <!--en este link incorporamos nuestro favicon-->
+  <link rel="icon" href="img/logo.png">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--iniciamos con bootstrap y definimos nuestro css-->
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles.css">
+
+  <title>Masivvo</title>
+</head>
+
+<body>
+
+
+  <div class="container">
+
+    <!--=====================================-->
+    <!--ENCABEZADO aqui usamos varias caracteristicas de bootstrap como lo es la definicion de el color (text-ligth), tamaño de la letra
+    (fs) y la ubicacion del texto (mb y p)-->
+    <!--=====================================-->
+    <header class="container-fluid bg-success d-flex justify-content-center">
+      <p class="text-light mb-0 p-2 fs-6">Masivvo, el verdadero marketing digital</p>
+    </header>
+
+    <!--=====================================-->
+    <!--ETIQUETAS-->
+    <!--=====================================-->
+  
+  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-3" id="menu">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <span class="text-primary fs-6 fw-bold">
+            <img src="./img/logo.png" class="rounded-circle" id="img-logo">
+          </span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Quienes Somos</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Conoce más
+              </a>
+              
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="disenoweb.html">Diseño Web</a></li>
+                <li><a class="dropdown-item" href="MarketingDigital.html">Marketing Digital</a></li>
+                <li><a class="dropdown-item" href="CommunityManagement.html">Community Management</a></li>
+                <li><a class="dropdown-item" href="ImplementaciondeSistemasdeGestion.html">Gestion y Desarrollo</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="index.html" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Portafolio
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="index.html">Paquete Plata</a></li>
+                <li><a class="dropdown-item" href="index.html">Paquete Oro</a></li>
+                <li><a class="dropdown-item" href="index.html">Paquete Diamante</a></li>
+              </ul>
+            </li>
+            <!-- esta linea de "contato", viene originalmente deshabilitada desde boopstrap, yo le elimine ese disabled para poder usarlo y 
+            que sea visible en la pagina-->
+            <li class="nav-item">
+              <a class="nav-link " href="/index.html">Contacto</a>
+            </li>
+            <!-- aqui se edita la seccion del menu que dice buscar, originalmente desde el boopstrap viene en ingles, simplemente cambie
+            la palabra en ingles y la puse en español-->
+          </ul>
+          <form class="d-flex" action="#">
+            <input class="form-control me-2" type="Texto" placeholder="Search" aria-label="Buscar" name="Search">
+            <button class="btn btn-outline-success fs-6 d-flex justify-content-center" type="button" href="#">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav> 
+
+  
+    <!-- SLIDER (CARRUSEL de imagenes) en boopstrap podemos seleccionar el tipo de carrusel que queremos, ya viene todo el codigo como siempre
+    pero le adicionamos el data-bs-interval que significa intervalo o duracion de cada imagen antes de cambiar a la otra, esto se da en milisegundo
+    le di 3000mseg para que fuera mas visible pero podemos editarla como queramos-->
+
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+ 
+  <div class="carousel-indicators">
+    <button data-bs-target="#intro" data-bs-slide-to="0" class="active"></button>
+    <button data-bs-target="#intro" data-bs-slide-to="1"></button>
+    <button data-bs-target="#intro" data-bs-slide-to="2"></button>
+    <button data-bs-target="#intro" data-bs-slide-to="3"></button>
+  </div>
+
+  <div class="carousel-inner" data-bs-interval="3000">
+    <div class="carousel-item active">
+      <img src="img/slide4.jpg" class="d-block w-100" alt="slide1">
+    </div>
+    <div class="carousel-item" data-bs-interval="3000">
+      <img src="img/slide2.jpg" class="d-block w-100" alt="slide1">
+    </div>
+    <div class="carousel-item" data-bs-interval="3000">
+      <img src="img/slide3.jpg" class="d-block w-100" alt="slide1">
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+<!--introduccion-->
+<div class="row">
+  <div class="col-lg-8">
+    <h2 class="text-light" class="p3 fs-2 border-start border-3" id="inicio">Bienvenidos a Masivvo<h2>
+      <h4 class="mx-auto text-start" class="col-6"> Somos una empresa Colombiana
+        fundada en el 2010. Contamos con un equipo de trabajo inter disciplinario con diversas habilidades y experiencia
+        en el área digital.
+
+        Nuestro objetivo es agregar valor a las empresas mediante la prestación de servicios de alta calidad en diseño
+        web profesional y responsivo, marketing digital, community management, implementación de sistemas de gestión y
+        mucho más.
+        Nuestro equipo de trabajo se caracteriza por brindar soluciones a nuestros clientes en el tiempo estimado, con
+        calidad y con un alto grado de responsabilidad y cumplimiento.
+      </h4>
+  </div>   
+    <div class="col-lg-4">
+      <img src="img/desarrollo.png" alt="Masivvo" class="img-fluid">
+    </div>
+  </div>
+
+<!--INSERTAREMOS LAS CARACTERISTICAS DE NUESTROS PAQUETES, ESTE LLEVA UNA IMAGEN ALUSIVA A NUESTROS SERVICIOS,
+EN BOOPSTRAP CONTAMOS CON UNA HERRAMIENTA LLAMADA LAYOUT/GRIP LA CUAL NOS PERMITE DIVIDIR EN COLUMNAS NUESTRA PAGINA
+Y ASI DARLE USO A ESTOS ESPACIOS QUE GENERAMOS -->
+    <!--=====================================-->
+    <!--Conoce mas y Quienes somos-->
+    <!--=====================================-->
+
+    <br>
+    <hr>
+  <div class="col-lag-6 text-justify">
+      <h1 class="Text-center">Conoce más</h1>
+  <div>
+  <div class="row">
+    <div class="col-lg-8">
+    <div class="row">
+      <div class="col-lg-5">
+        <img src="img/slide3.jpg" alt="Diseñoweb" class="img-fluid">
+  </div>
+      <div class="col-lg-7">
+        <a href="disenoweb.html">
+          <h5>Diseño Web</h5>
+        </a>  
+        <p class="text-justify">Creamos a tu gusto, gestionamos tus ideas.</p>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-lg-5">
+        <img src="img/img2.jpg" alt="MarketingDigital" class="img-fluid">
+      </div>
+      <div class="col-lg-7">
+        <a href="MarketingDigital.html">
+          <h5>Marketing Digital</h5>
+        </a>
+        <p class="text-justify">Posicionamos tu empresa en la cima de la era digital</p>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-lg-5">
+        <img src="img/img6.jpg" alt="Community" class="img-fluid">
+      </div>
+      <div class="col-lg-7">
+        <a href="CommunityManagement.html">
+          <h5>Community Management</h5>
+        </a>
+        <p class="text-justify">Logramos el maximo de provecho de tus redes sociales.</p>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-lg-5">
+        <img src="img/img7.jpg" alt="sistemasdegestion" class="img-fluid">
+      </div>
+      <div class="col-lg-7">
+        <a href="ImplementaciondeSistemasdeGestion.html">
+          <h5>Implementacion de Sistemas de Gestión</h5>
+        </a>
+        <p class="text-justify">Nuestra meta es maximizar tu produccion y, por ende, tus ganancias.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 text-justify">
+    <h1 class="Text-center">Quienes Somos</h1>
+    <H4 class="text-center">Misión</H4>
+    <p class="text-justify">Promoveer a nuestros clientes confianza, llevando innovación a sus sueños, creciendo.
+    </p>
+    <p class="text-justify">Masivvo, se esfuerza por dar garantias al cliente basados en la información, en la
+      honestidad y transparencia.</p>
+    <p class="text-justify">Trabajamos para hacer crecer nuestra compañia con integridad y honestidad, al igual que
+      cuando ayudamos a nuestros clientes a cumplir con su objetivo.</p>
+      <H4 class="text-center">Visión</H4>
+    <p class="text-justify">Proveer la mejor experiencia de nuestros clientes haciendo que sea unica, creciendo en
+      conocimiento e innovación, mejorando continuamente nuestros productos y servicios.</p>
+    <p class="text-justify"> Logrando asi un gran reconocimiento de nuestro trabajo al solo ver el logo de Masivvo.</p>
+    <br>
+    <p class="text-justify"><b> Nombre de la empresa:</b> Masivvo<p>
+    <p class="text-justify"><b> Que es la empresa:</b> Agencia de Marketing digital<p>
+    <p class="text-justify"><b> Lugar de operación:</b> Bogotá DC<p>
+    <p class="text-justify"><b> Ubicación:</b> Calle 93 # 12 - 41<p> 
+    <p class="text-justify"><b> Comercialización:</b> productos y servicios<p>
+    </div>
+  </div>
+</div>
+      <br>
+      <hr>
+      <br>
+
+  <!--=====================================-->
+  <!--Productos y Servicios-->
+  <!--=====================================-->
+   <div> 
+    <section class="container-fluid">
+      <div class="row">
+        <div class="col-lag-6 col-md-12">
+          <h3 class="text-center"><b>Portafolio de productos y servicios</b></h3>
+          <br>
+          <div>
+            <div class="row">
+              <span class="border border-warning">
+                <h4><b>Paquete Plata:</b><h4>
+                <h5><b>Producto:</b></h5>
+                <p><h6>•	4 piezas gráficas, en formato .JPG full HD</h6> (disponible para el uso en Twitter, Facebook o Instagram)</p>          
+                <h5><b>Servicio:</b></h5>
+                <p><h6>•	Accesoria general en manejo de redes sociales</h6> (2 reuniones mensuales)</p>
+                <p><h6>•	Community Manager</h6> (publicación de 4 piezas gráficas y redacción de pie de foto)</p>
+                <h4><b>Valor: $1.200.000</b></h4>
+              </span>
+            </div>
+          </div>
+          
+          <br>
+          <br>
+
+          <div>
+            <div class="row">
+              <span class="border border-warning">
+                <h4><b>Paquete Oro:</b><h4>
+                <h5><b>Producto:</b></h5>
+                <p><h6>•	8 piezas gráficas, en formato .JPG full HD</h6> (disponible para el uso en Twitter, Facebook o Instagram)</p>          
+                <h5><b>Servicio:</b></h5>
+                <p><h6>•	Accesoria general en manejo de redes sociales</h6> (2 reuniones mensuales)</p>
+                <p><h6>•	Community Manager</h6> (publicación de 8 piezas gráficas y redacción de pie de foto)</p>
+                <h4><b>Valor: $1.600.000</b></h4>
+              </span>
+            </div>
+          </div>
+
+          <br>
+          <br>
+          
+          <div>
+            <div class="row">
+              <span class="border border-warning">
+                <h4><b>Paquete Diamante:</b><h4>
+                <h5><b>Producto:</b></h5>
+                <p><h6>•	12 piezas gráficas, en formato .JPG full HD </h6> (disponible para el uso en Twitter, Facebook o Instagram)</p>          
+                <h5><b>Servicio:</b></h5>
+                <p><h6>•	Accesoria general en manejo de redes sociales</h6> (2 reuniones mensuales)</p>
+                <p><h6>•	Community Manager</h6> (manejo de redes sociales por 30 días 16 publicaciones de manera mensual)</p>
+                <h4><b>Valor: $1.895.000</b></h4>
+              </span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <br>
+  <hr>
+  <br>
+
+<!-- seccion que opinan nuestros clientes -->
+<section class="clientes contenedor mt-3 mb-3 text-center ">
+<h2 class="titulo">Que opinan nuestros clientes</h2>
+<div class="cards">
+    <div class="card ">
+        <img src="img/face1.jpg" alt="">
+        <div class="contenido-texto-card">
+            <h4>Name</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, voluptate.</p>
+        </div>
+    </div>
+    <div class="card col-lg-6">
+        <img src="img/face2.jpg" alt="">
+        <div class="contenido-texto-card">
+            <h4>Name</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, voluptate.</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<br>
+<hr>
+<br>
+
+<form action="/correos.php" method="post">
+<div class="container">
+  <div class="row">
+      <div class="col">
+          <div class="mt-3 mb-3 text-center">
+              <p class="fw-bold fs-1">Contáctanos</p>
+              <p>Déjanos tu información en breve te contactaremos</p>
+          </div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col">
+          <div class="mt-3 mb-3">
+              <label class="form-label" for="Nombre">Nombre</label>
+              <input type="text" class="form-control">
+          </div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col">
+          <div class="mt-3 mb-3">
+              <label class="form-label" for="Empresa">Empresa</label>
+              <input type="text" class="form-control">
+          </div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col">
+          <div class="mt-3 mb-3">
+              <label class="form-label" for="Email">Email</label>
+              <input type="email" class="form-control">
+              <div class="form-text">Nosotros nunca compartiremos tu correo electrónico con nadie.</div>
+          </div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-6">
+          <div class="mt-3 mb-3">
+              <label class="form-label" for="Ciudad">Ciudad</label>
+              <input type="text" class="form-control">
+          </div>
+      </div>
+      <div class="col-6">
+          <div class="mt-3 mb-3">
+              <label class="form-label" for="Telefono">Telefono</label>
+              <input type="text" class="form-control">
+          </div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-6">
+          <div class="mt-3 mb-3">
+              <label class="form-label" for="Servicio que deseas">Servicio que deseas</label>
+              <select class="form-select" aria-label="Default select example">
+                  <option selected></option>
+                  <option>Diseño de pagina web</option>
+                  <option>Creación de marca</option>
+                  <option>Pauta digital</option>
+                  <option>Plan completo</option>
+              </select>
+          </div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col">
+          <div class="mt-3 mb-3 form-check">
+              <input type="checkbox" class="form-check-input">
+              <label class="form-check-label">Aceptas el envio de informacion y promociones a tu correo
+                  electrónico</label>
+          </div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col d-grid gap-2 d-md-flex justify-content-md-end mt-3 mb-3">
+          <button type="submit" class="btn btn-outline-success">Enviar</button>
+      </div>
+  </div>
+</div>
+</form>
+
+
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
